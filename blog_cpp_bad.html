@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="syntax_highlight/xt256.css"> <!-- Highlight.js theme -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>GPU Governor</h1>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        <h2>Why C++ is Bad for Video Game Engine Scripting</h2>
+        <i style="color: #00abf0;">August 2024 - 4 minute read</i>
+        <br>
+        <p>95% of game engines are built in C and C++. Despite the core of most game engines being developed in C++, many game engines avoid it for game logic programming. But why is this? First, we need to understand how a game engine works.</p>
+        <img src="files/blog/engine.webp" alt="Project Image" style="width: 100%; height: auto;">
+        <!-- Section on How Game Engines are Made -->
+        <h3>How Game Engines are Made</h3>
+        <p>Building a game engine can be broken down into several core systems. These include the rendering engine, physics engine, sound engine, scripting system, and more. Each of these systems typically has different performance requirements and coding challenges.</p>
+        <!-- Section on why C++-->
+        <h3>Why is C++ used for Game programming</h3>
+        <p>Actually you can build a Game Engine in any language of your choice, However Game Engines utilizes graphics api's and all graphics api's are written in C and works natively with C++.</p>
+        
+        <!-- Section on Challenges with C++ -->
+        <h3>Challenges with C++ for Scripting</h3>
+        <p>C++ is a powerful language, but it has its downsides when used for scripting in game engines:</p>
+        <ul>
+            <li><strong>Compile Times:</strong> C++ compile times can be lengthy, slowing down iteration and testing. so using another language for scripting allows you to only run the sides that changes and not compile the entire engine from scratch. However if still use to use C++ for your engine scripting and you want to avoid compile time you can use livecpp which update changes without recompilling.</li>
+            <li><strong>Memory Management Complexity:</strong> Unlike managed languages, C++ requires manual memory management, which can lead to memory leaks and bugs that are difficult to track down. When using a seperate language for scripting bugs detected will throw an error and not crash the entire program like c++ would. However tools like web assembly with C++ for scripting fixes memory flaws.</li>
+            <li><strong>Verbosity:</strong> C++ code tends to be more verbose, making it harder for designers and non-programmers to write or adjust game scripts.</li>
+            <li><strong>Lack of Dynamic Typing:</strong> Many scripting languages use dynamic typing, which can speed up development for game logic where strict type-checking isn’t as critical.</li>
+        </ul>
+        
+        <!-- Alternatives for Game Scripting -->
+        <h3>Common Alternatives for Game Scripting</h3>
+        <p>Due to these limitations, many game engines choose scripting languages that are easier to use for game logic. Common choices include:</p>
+        <ul>
+            <li><strong>Python:</strong> Easy to learn and integrates well with C++ via bindings, often used in prototyping and AI scripting.</li>
+            <li><strong>Lua:</strong> Lightweight and fast, Lua is popular in engines like Unity for its simplicity and performance.</li>
+            <li><strong>C#:</strong> Used in Unity, C# strikes a balance between performance and ease of use, offering faster compilation and managed memory.</li>
+        </ul>
+        
+        <!-- Conclusion -->
+        <h3>Conclusion</h3>
+        <p>While C++ remains essential for performance-critical parts of a game engine, using it for scripting adds significant complexity without much benefit. By combining C++ for the core engine and a high-level scripting language, game developers get the best of both worlds: high performance and ease of use.The main reason why C++ can't ever be a scripting language is because it's not an interpreted language but rather a compiled language, Although tools like cling which is an interpreted C++ exist (C++ with an interpreter instead of compiler).</p>
+    </section>
+
+    <!-- Back Link -->
+    <footer>
+        <p><a href="index.html">Back to Portfolio</a></p>
+    </footer>
+
+    <!-- Highlight.js for Code Syntax Highlighting -->
+    <script src="syntax_highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+</html>
